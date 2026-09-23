@@ -24,6 +24,20 @@
       border-bottom: 1px solid #ddd;
       padding-bottom: 6px;
     }
+    h3 {
+      font-size: 17px;
+      margin-top: 24px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin: 8px 0;
+    }
+    ul {
+      padding-left: 24px;
+    }
+    li {
+      margin: 4px 0;
+    }
     a {
       color: #d6336c;
     }
@@ -41,10 +55,37 @@
       color: #666;
       font-size: 14px;
     }
+    .box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #fafafa;
+      border-radius: 12px;
+      color: #555;
+      font-size: 14px;
+    }
     .footer {
       margin-top: 48px;
       font-size: 13px;
       color: #777;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #f2f2f2;
+        background: #151515;
+      }
+      h2 {
+        border-bottom-color: #444;
+      }
+      .note {
+        color: #aaa;
+      }
+      .box {
+        background: #222;
+        color: #bbb;
+      }
+      .footer {
+        color: #999;
+      }
     }
   </style>
 </head>
@@ -52,20 +93,31 @@
   <h1>LiveStair サポート</h1>
   <p>LiveStairをご利用いただきありがとうございます。</p>
   <p>
-    LiveStairに関するお問い合わせ、不具合報告、ご要望は以下のフォームよりご連絡ください。
+    LiveStairに関するお問い合わせ、不具合報告、ご要望は、
+    以下のお問い合わせフォームよりご連絡ください。
   </p>
   <h2>お問い合わせ</h2>
   <p>
-    <a class="button" href="https://docs.google.com/forms/d/12xp7GbLsdf5bWrzg9U2wsdPM1wjvA-Y30ADIgQsXRzM/viewform" target="_blank" rel="noopener noreferrer">
+    <a
+      class="button"
+      href="https://docs.google.com/forms/d/12xp7GbLsdf5bWrzg9U2wsdPM1wjvA-Y30ADIgQsXRzM/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       お問い合わせフォームを開く
     </a>
   </p>
   <p class="note">
-    ※フォームが開けない場合は、時間をおいて再度お試しください。
+    ※お問い合わせフォームにはGoogleフォームを使用しています。
+  </p>
+  <p class="note">
+    ※フォームが開けない場合は、通信環境をご確認のうえ、
+    時間をおいて再度お試しください。
   </p>
   <h2>不具合報告について</h2>
   <p>
-    不具合をご連絡いただく際は、可能であれば以下の情報を添えてください。
+    不具合をご連絡いただく際は、
+    可能であれば以下の情報を添えてください。
   </p>
   <ul>
     <li>使用している端末</li>
@@ -73,29 +125,156 @@
     <li>LiveStairのアプリバージョン</li>
     <li>不具合が発生した画面</li>
     <li>不具合が発生するまでの操作内容</li>
+    <li>毎回発生するか、一度だけ発生したか</li>
+    <li>表示されたエラーメッセージ</li>
     <li>スクリーンショット</li>
   </ul>
+  <div class="box">
+    個人情報や公開したくない内容が画面に含まれている場合は、
+    必要に応じてスクリーンショットの該当部分を隠してからお送りください。
+  </div>
   <h2>よくある内容</h2>
   <h3>データはどこに保存されますか？</h3>
   <p>
-    LiveStairに登録したライブ、アーティスト、会場、セットリストなどのデータは、基本的にお使いの端末内に保存されます。
+    LiveStairに登録したライブ、アーティスト、会場、
+    セットリスト、メモなどのデータは、
+    基本的にお使いの端末内に保存されます。
+  </p>
+  <p>
+    ログインやLiveStair専用アカウントは必要ありません。
   </p>
   <h3>機種変更時にデータを移行できますか？</h3>
   <p>
-    アプリ内のバックアップ機能を使用して、データを書き出し・復元できます。
+    アプリ内の「データ管理」からJSONバックアップを書き出し、
+    新しい端末のLiveStairで読み込むことで、
+    データを移行できます。
+  </p>
+  <div class="box">
+    LiveStairのデータを復元・移行する場合はJSONを使用してください。
+    CSVは主に表計算ソフトなどでデータを確認・整理するための形式です。
+  </div>
+  <h3>CSVとJSONの違いは何ですか？</h3>
+  <p>
+    CSVは、ライブ情報などを表計算ソフトで一覧化・整理・加工する場合に向いています。
+  </p>
+  <p>
+    JSONは、LiveStairのデータをバックアップし、
+    別端末への移行や復元を行うための形式です。
+  </p>
+  <p>
+    大切なデータのバックアップにはJSONを使用してください。
+  </p>
+  <h3>アプリを削除するとデータはどうなりますか？</h3>
+  <p>
+    端末内にのみ保存されているLiveStairのデータは、
+    アプリを削除すると失われる可能性があります。
+  </p>
+  <p>
+    アプリを削除したり機種変更したりする前に、
+    JSONバックアップを保存することをおすすめします。
+  </p>
+  <p>
+    ファイルアプリやiCloud Driveなどへ書き出したバックアップファイルは、
+    LiveStairを削除しても自動的には削除されません。
   </p>
   <h3>写真へのアクセスは何に使いますか？</h3>
   <p>
-    アーティスト画像やライブ写真を登録するために、ユーザーが選択した画像を使用します。
-    また、共有用画像やスクリーンショットを作成した際に、ユーザーの操作により写真ライブラリへ保存する場合があります。
+    アーティスト画像、ライブ写真、
+    セットリスト画像などを登録するために、
+    ユーザーが選択した画像を使用します。
+  </p>
+  <p>
+    また、共有用画像などを保存する際に、
+    ユーザーの操作によって写真ライブラリを使用する場合があります。
   </p>
   <h3>登録した写真や画像は外部に送信されますか？</h3>
   <p>
-    登録した写真や画像が、開発者に送信されることはありません。
+    LiveStairに登録した写真や画像が、
+    開発者へ自動的に送信されることはありません。
+  </p>
+  <p>
+    お問い合わせ時にユーザー自身がスクリーンショット等を
+    添付した場合を除き、開発者が画像を取得することはありません。
+  </p>
+  <h3>Music連携は何に使いますか？</h3>
+  <p>
+    LiveStairでは、
+    端末内のミュージックライブラリやApple Musicの楽曲と、
+    LiveStairに登録した曲を紐づけることができます。
+  </p>
+  <p>
+    楽曲名、アーティスト名、アルバム情報、
+    ジャケット画像などを、
+    楽曲の検索・照合・表示やプレイリスト作成のために使用する場合があります。
+  </p>
+  <p>
+    Music連携は任意です。
+    利用しなくても、ライブ登録、セットリスト、
+    集計などの基本機能は使用できます。
+  </p>
+  <h3>Music連携で曲が見つからない、違う曲が表示されます。</h3>
+  <p>
+    楽曲名やアーティスト名の表記違い、
+    同名楽曲、アルバム違いなどにより、
+    自動的に正しい候補を判定できない場合があります。
+  </p>
+  <p>
+    候補が表示される場合は、
+    正しい楽曲を選択して紐づけしてください。
+  </p>
+  <h3>Music連携が利用できません。</h3>
+  <p>
+    iPhone・iPadの設定から、
+    LiveStairにミュージックライブラリへのアクセスが許可されているか確認してください。
+  </p>
+  <p>
+    Apple Music上の楽曲を利用する機能については、
+    Apple Musicの利用状況や通信環境によって
+    使用できない場合があります。
+  </p>
+  <h3>通知が届きません。</h3>
+  <p>
+    iPhone・iPadの設定から、
+    LiveStairの通知が許可されているか確認してください。
+  </p>
+  <p>
+    また、LiveStairの通知設定と、
+    対象ライブの開場・開演時刻が正しく登録されているか確認してください。
+  </p>
+  <p>
+    端末やOSの状態によって、
+    通知が予定時刻から前後する場合があります。
+  </p>
+  <h3>登録した写真やメモは他のユーザーに公開されますか？</h3>
+  <p>
+    LiveStairには、
+    登録したライブ情報、写真、メモなどを
+    他のLiveStairユーザーへ自動的に公開する機能はありません。
+  </p>
+  <p>
+    共有画像を保存してSNS等へ投稿する場合は、
+    ユーザー自身の操作によって共有されます。
   </p>
   <h2>関連リンク</h2>
   <ul>
-    <li><a href="https://livestair-support.github.io/livestair-policy/" target="_blank" rel="noopener noreferrer">利用規約・プライバシーポリシー</a></li>
+    <li>
+      <a
+        href="https://livestair-support.github.io/livestair-policy/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        利用規約・プライバシーポリシー
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://livestair-support.github.io/livestair-guide/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LiveStair 使い方ガイド
+      </a>
+    </li>
   </ul>
   <div class="footer">
     <p>© 2026 LiveStair</p>
